@@ -1,4 +1,4 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -650,6 +650,1007 @@
 
     /* =========================================================
        CONTRACT
-    =======================================================
-```
+    ========================================================= */
+
+    .code-window {
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      background: #080b0f;
+    }
+
+    .code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 13px 18px;
+
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+
+      background: #0c1015;
+
+      color: #68727e;
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 11px;
+    }
+
+    .code-body {
+      padding: 28px;
+
+      overflow-x: auto;
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 12px;
+
+      line-height: 2;
+    }
+
+    .code-line {
+      display: flex;
+    }
+
+    .line-number {
+      width: 38px;
+
+      flex-shrink: 0;
+
+      color: #303844;
+
+      user-select: none;
+
+      text-align: right;
+
+      margin-right: 20px;
+    }
+
+    .keyword {
+      color: #a78bfa;
+    }
+
+    .property {
+      color: #67b7ff;
+    }
+
+    .string {
+      color: #9fdb9f;
+
+      overflow-wrap: anywhere;
+    }
+
+    .comment {
+      color: #46505b;
+    }
+
+
+    /* =========================================================
+       COMMUNITY
+    ========================================================= */
+
+    .links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 14px;
+    }
+
+    .link-card {
+      position: relative;
+
+      padding: 26px;
+
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+
+      background: #090d12;
+
+      transition: 0.25s ease;
+    }
+
+    .link-card::after {
+      content: "↗";
+
+      position: absolute;
+
+      top: 24px;
+      right: 24px;
+
+      color: #48515d;
+
+      font-size: 16px;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+
+      border-color: rgba(124,58,237,0.5);
+
+      background: #0d1118;
+    }
+
+    .link-card strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #dce2e8;
+
+      font-size: 15px;
+    }
+
+    .link-card span {
+      color: #697480;
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 45px 0;
+
+      border-top: 1px solid rgba(255,255,255,0.07);
+
+      color: #505965;
+
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+      font-size: 11px;
+
+      text-align: center;
+    }
+
+    footer .footer-command {
+      margin-bottom: 12px;
+
+      color: #68727e;
+    }
+
+    footer .footer-command span {
+      color: #7c3aed;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .system-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(92%, 520px);
+      }
+
+      nav {
+        min-height: 64px;
+      }
+
+      .nav-links,
+      .nav-status {
+        display: none;
+      }
+
+      .hero {
+        padding: 85px 0 75px;
+      }
+
+      .hero h1 {
+        font-size: clamp(52px, 17vw, 78px);
+
+        letter-spacing: -4px;
+      }
+
+      .hero h1 .dim {
+        font-size: 0.42em;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        justify-content: center;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-description {
+        margin-top: 15px;
+      }
+
+      .system-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .terminal-body,
+      .code-body {
+        padding: 20px;
+
+        font-size: 10px;
+      }
+
+      .code-body {
+        white-space: normal;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a class="brand" href="#top">
+
+          <div class="brand-mark">
+            MOJ
+          </div>
+
+          <div>
+            HENOHENOMOHEJI
+            <span>/ SUI</span>
+          </div>
+
+        </a>
+
+        <div class="nav-links">
+
+          <a href="#about">ABOUT</a>
+          <a href="#contract">CONTRACT</a>
+          <a href="#community">COMMUNITY</a>
+
+        </div>
+
+        <div class="nav-status">
+
+          <span class="status-dot"></span>
+
+          SUI MAINNET
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-grid">
+
+
+          <div>
+
+            <div class="terminal-label mono">
+              initialize henohenomoheji
+            </div>
+
+
+            <h1>
+
+              MOJ
+
+              <span class="dim">
+                HENOHENOMOHEJI
+              </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+              A <strong>community-driven token</strong>
+              built on the Sui blockchain.
+              Simple idea. Open community.
+              On-chain.
+
+            </p>
+
+
+            <div class="buttons">
+
+              <a
+                class="button primary"
+                href="https://suivision.xyz/coin/0x04c06ee518a9450ca508fd553e227f509c936b3142f299e66e0038e0c6fb5e8e::moj::MOJ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ↗ SUIVISION
+              </a>
+
+
+              <a
+                class="button"
+                href="https://x.com/MOHEJI_MOJ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                𝕏 X / TWITTER
+              </a>
+
+
+              <a
+                class="button"
+                href="https://t.me/mohejicoin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ↗ TELEGRAM
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- TERMINAL -->
+
+          <div class="terminal">
+
+            <div class="terminal-top">
+
+              <div class="terminal-dots">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+              <div class="terminal-title">
+                moj@mainnet:~
+              </div>
+
+            </div>
+
+
+            <div class="terminal-body">
+
+              <div class="line">
+                <span class="prompt">$</span>
+                <span class="command">
+                  moj status
+                </span>
+              </div>
+
+              <div class="line">
+                <span class="output">
+                  network
+                </span>
+
+                <span class="value">
+                  SUI MAINNET
+                </span>
+              </div>
+
+              <div class="line">
+                <span class="output">
+                  project
+                </span>
+
+                <span class="value">
+                  HENOHENOMOHEJI
+                </span>
+              </div>
+
+              <div class="line">
+                <span class="output">
+                  symbol
+                </span>
+
+                <span class="purple">
+                  MOJ
+                </span>
+              </div>
+
+              <div class="line">
+                <span class="output">
+                  status
+                </span>
+
+                <span class="green">
+                  ONLINE
+                </span>
+              </div>
+
+              <br>
+
+              <div class="line">
+                <span class="prompt">$</span>
+                <span class="command">
+                  moj connect
+                </span>
+              </div>
+
+              <div class="line">
+                <span class="green">
+                  ✓
+                </span>
+
+                <span class="output">
+                  connected to Sui
+                </span>
+              </div>
+
+              <br>
+
+              <div class="line">
+
+                <span class="prompt">
+                  $
+                </span>
+
+                <span class="command">
+                  _
+                  <span class="terminal-cursor"></span>
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-number mono">
+              01 / ABOUT
+            </div>
+
+            <h2 class="section-title">
+              The Project
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+
+            Official information about
+            Henohenomoheji (MOJ).
+
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+          <div class="panel">
+
+            <p>
+              <strong>Henohenomoheji (MOJ)</strong>
+              is a community-driven token
+              on the Sui blockchain.
+            </p>
+
+            <p>
+              MOJ is built around community,
+              creativity and on-chain culture.
+            </p>
+
+            <p>
+              This website serves as the
+              official project hub for MOJ,
+              connecting the community with
+              on-chain resources and social channels.
+            </p>
+
+          </div>
+
+
+          <div class="panel mono">
+
+            <p>
+              <span class="purple">const</span>
+              project = {
+            </p>
+
+            <p>
+              &nbsp;&nbsp;name:
+              <span class="string">
+                "HENOHENOMOHEJI"
+              </span>,
+            </p>
+
+            <p>
+              &nbsp;&nbsp;symbol:
+              <span class="string">
+                "MOJ"
+              </span>,
+            </p>
+
+            <p>
+              &nbsp;&nbsp;network:
+              <span class="string">
+                "Sui"
+              </span>
+            </p>
+
+            <p>
+              };
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SYSTEM
+    ====================================================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-number mono">
+              02 / SYSTEM
+            </div>
+
+            <h2 class="section-title">
+              Network Status
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="system-grid">
+
+
+          <div class="system-card">
+
+            <div class="system-card-label">
+              Network
+            </div>
+
+            <div class="system-card-value">
+              SUI MAINNET
+            </div>
+
+          </div>
+
+
+          <div class="system-card">
+
+            <div class="system-card-label">
+              Token
+            </div>
+
+            <div class="system-card-value">
+              MOJ
+            </div>
+
+          </div>
+
+
+          <div class="system-card">
+
+            <div class="system-card-label">
+              Type
+            </div>
+
+            <div class="system-card-value">
+              COMMUNITY TOKEN
+            </div>
+
+          </div>
+
+
+          <div class="system-card">
+
+            <div class="system-card-label">
+              Status
+            </div>
+
+            <div class="system-card-value online">
+              ● ONLINE
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTRACT
+    ====================================================== -->
+
+    <section id="contract">
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-number mono">
+              03 / CONTRACT
+            </div>
+
+            <h2 class="section-title">
+              On-chain Identity
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+
+            The official Sui Coin Type
+            for Henohenomoheji.
+
+          </p>
+
+        </div>
+
+
+        <div class="code-window">
+
+
+          <div class="code-header">
+
+            <span>
+              moj.move
+            </span>
+
+            <span>
+              SUI / MOVE
+            </span>
+
+          </div>
+
+
+          <div class="code-body">
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                01
+              </span>
+
+              <span class="comment">
+                // Henohenomoheji — MOJ
+              </span>
+
+            </div>
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                02
+              </span>
+
+              <span>
+                <span class="keyword">
+                  network
+                </span>
+                :
+                <span class="string">
+                  "Sui Mainnet"
+                </span>
+              </span>
+
+            </div>
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                03
+              </span>
+
+              <span>
+                <span class="keyword">
+                  symbol
+                </span>
+                :
+                <span class="string">
+                  "MOJ"
+                </span>
+              </span>
+
+            </div>
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                04
+              </span>
+
+              <span>
+                <span class="keyword">
+                  coin_type
+                </span>
+                :
+              </span>
+
+            </div>
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                05
+              </span>
+
+              <span class="string">
+
+                0x04c06ee518a9450ca508fd553e227f509c936b3142f299e66e0038e0c6fb5e8e::moj::MOJ
+
+              </span>
+
+            </div>
+
+
+            <div class="code-line">
+
+              <span class="line-number">
+                06
+              </span>
+
+              <span class="comment">
+                // verified on-chain identity
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+          <a
+            class="button primary"
+            href="https://suivision.xyz/coin/0x04c06ee518a9450ca508fd553e227f509c936b3142f299e66e0038e0c6fb5e8e::moj::MOJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ↗ VIEW ON SUIVISION
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMMUNITY
+    ====================================================== -->
+
+    <section id="community">
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div>
+
+            <div class="section-number mono">
+              04 / COMMUNITY
+            </div>
+
+            <h2 class="section-title">
+              Connect
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+
+            Follow the project and
+            join the MOJ community.
+
+          </p>
+
+        </div>
+
+
+        <div class="links">
+
+
+          <a
+            class="link-card"
+            href="https://x.com/MOHEJI_MOJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <strong>
+              X / Twitter
+            </strong>
+
+            <span>
+              @MOHEJI_MOJ
+            </span>
+
+          </a>
+
+
+          <a
+            class="link-card"
+            href="https://t.me/mohejicoin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <strong>
+              Telegram
+            </strong>
+
+            <span>
+              @mohejicoin
+            </span>
+
+          </a>
+
+
+          <a
+            class="link-card"
+            href="https://suivision.xyz/coin/0x04c06ee518a9450ca508fd553e227f509c936b3142f299e66e0038e0c6fb5e8e::moj::MOJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <strong>
+              SuiVision
+            </strong>
+
+            <span>
+              MOJ Coin Page
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-command">
+        <span>$</span>
+        echo "HENOHENOMOHEJI"
+      </div>
+
+      © 2026 Henohenomoheji (MOJ)
+      · Built on Sui
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
 
